@@ -1,4 +1,3 @@
-import useModal from "../../hooks/useModal";
 
 interface IProps {
     children: React.ReactNode;

@@ -6,7 +6,7 @@ import { TaskContext } from '../context/taskContext';
 
 const DashboardContainer = () => {
 
-  const { taskLists } = React.useContext(TaskContext) as TaskContextType;
+ const { taskLists } = React.useContext(TaskContext) as TaskContextType;
 
   return (
     <>
