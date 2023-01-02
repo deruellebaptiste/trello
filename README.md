@@ -1,21 +1,21 @@
 
 Lien vers le site : https://trello-7d063.web.app/
 
-2 reussites :
+2 reussites :  
 La copie à l'air plutot fidele :p  
 J'ai essayé d'organiser aux mieux avec un context qui contient la logique et j'ai essayé de créé un maximum de components pour les styles qui se repetait.  
 
 
-2 Difficultés :
-Les icons !!! j'ai galéré à reproduire des icon à l'identique avec le peu de css que je récuperais  
-j'ai un peu trop voulu faire un component passe partout et il finissais par devenir imcprehensible car trop de logique. Car si on à l'impression visuelement que les composent se se resemble beaucoup on se rend compte qu'à chaque fois il  y a un peu de style qui change etc ... duc oup j'ai du revenir en arriere et cassé tout ça en plus petit component generic.  
+2 Difficultés :  
+Les icons !!! j'ai galéré à reproduire des icon à l'identique avec le peu de css que je récuperais.  
+J'ai un peu trop voulu faire un component passe partout et il finissais par devenir imcprehensible car trop de logique. Car si on à l'impression visuelement que les composent se se resemble beaucoup on se rend compte qu'à chaque fois il  y a un peu de style qui change etc ... du coup j'ai du revenir en arriere et cassé tout ça en plus petit component generic.  
 
 
 
-2 améliorations :
+2 améliorations :  
 Les tests !! je me suis pas trop tardés dessus x)  
-ajouté plus de generic component (textare, input, etc...) avec les tyles qui vont bien, mais aut bout d'un moment ça faisait un peu long pour le test technique :)  
-clean un peu le scss, je crois que j'ai pas finit de mettre tout en variables etc ... du coup y a un peu de magic color un peu partout.  
+Ajouté plus de generic component (textare, input, etc...) avec les tyles qui vont bien, mais aut bout d'un moment ça faisait un peu long pour le test technique :)  
+Clean un peu le scss, je crois que j'ai pas finit de mettre tout en variables etc ... du coup y a un peu de magic color un peu partout.  
 
 
 
