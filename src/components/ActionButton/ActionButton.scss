@@ -1,0 +1,49 @@
+@use './../../variables';
+.actionButton {
+    border-width: 0px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 4px 0px;
+    padding-left: 12px;
+    outline: none;
+    line-height: 32px;
+    height: 32px;
+    background-color: variables.$greylight;
+    color: rgb(49, 49, 49);
+    align-items: center;
+    display: flex;
+    padding-right: 4px;
+    position: relative;
+    text-align: left;
+    &:hover {
+        background-color: variables.$grey;
+        color: rgb(0, 0, 0);
+    }
+    .iconLeft {
+        align-items: center;
+        display: flex;
+        font-size: 16px;
+        margin-right: 2px;
+        color: rgb(145, 145, 145);
+    }
+    .checkContainer {
+        background-color: variables.$greenLight;
+        height: 24px;
+        width: 24px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        .check {
+            align-items: center;
+            display: flex;
+            &::before {
+                content: "\2713";
+                color: rgb(255, 255, 255);
+                font-size: 18px;
+            }
+        }
+    }
+}

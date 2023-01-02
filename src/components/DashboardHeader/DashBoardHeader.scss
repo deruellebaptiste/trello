@@ -1,0 +1,15 @@
+.dashboardHeader {
+    align-items: center;
+    display: flex;
+    padding: 8px;
+    .boardTitle {
+        align-items: center;
+        display: flex;
+        font-size: 18px;
+        font-weight: 700;
+        height: 32px;
+        margin: 0px;
+        padding-left: 12px;
+        margin-right: 20px;
+    }
+}

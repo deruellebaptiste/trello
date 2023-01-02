@@ -1,0 +1,61 @@
+@use './../../variables';
+.addTask {
+    display: flex;
+    flex-direction: column;
+    .formAddTask {
+        background-color: rgba(255, 255, 255, 0.24);
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        transition: background 85ms ease-in 0s;
+        padding: 8px;
+        .description {
+            border: 0px;
+            text-align: left;
+            padding: 0px;
+        }
+        .addIcon {
+            margin-right: 15px;
+            margin-left: 10px;
+            position: relative;
+            height: 20px;
+            width: 20px;
+            color: variables.$grey97;
+        }
+        .addIcon::before {
+            content: "";
+            background-color: variables.$grey97;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background 85ms ease-in 0s;
+            width: 2px;
+        }
+        .addIcon::after {
+            content: "";
+            background-color: variables.$grey97;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background 85ms ease-in 0s;
+            width: 12px;
+        }
+        .submitContainer {
+            display: flex;
+            margin-top: 4px;
+            .close {
+                margin-left: 4px;
+                position: absolute;
+                transform: translate(-50%, -50%) rotate(45deg);
+                top: 50%;
+                left: 50%;
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+}

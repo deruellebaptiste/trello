@@ -1,0 +1,19 @@
+@use './../../variables';
+.header {
+    background-color: variables.$black17;
+    display: flex;
+    height: 40px;
+    position: relative;
+    .logo {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        opacity: 0.5;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

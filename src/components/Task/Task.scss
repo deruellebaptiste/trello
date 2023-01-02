@@ -1,0 +1,52 @@
+.task {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 0px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    &:hover {
+        background-color: rgb(244, 245, 247);
+    }
+    &:last-child {
+        margin-bottom: 0px;
+    }
+    .taskButton {
+        border-width: 0px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+        margin: 0px;
+        outline: none;
+        background-color: transparent;
+        height: auto;
+        line-height: 1;
+        padding: 0px;
+        width: 100%;
+        .taskName {
+            align-items: center;
+            color: rgb(49, 49, 49);
+            display: flex;
+            font-size: 14px;
+            font-weight: 400;
+            height: 32px;
+            line-height: 20px;
+            margin: 0px;
+            padding-left: 8px;
+            padding-right: 8px;
+            text-align: left;
+        }
+        .infos {
+            display: flex;
+            padding-left: 8px;
+            padding-right: 8px;
+            .iconSpan {
+                font-size: 16px;
+                margin-bottom: 4px;
+                margin-left: 4px;
+                margin-right: 4px;
+                color: rgb(145, 145, 145);
+            }
+        }
+    }
+}

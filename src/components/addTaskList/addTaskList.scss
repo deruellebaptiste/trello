@@ -1,0 +1,61 @@
+.addTaskList {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
+    margin-right: 4px;
+    width: 272px;
+    .formAddTaskList {
+        background-color: rgba(255, 255, 255, 0.24);
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        transition: background 85ms ease-in 0s;
+        .taskInput {
+            border-style: solid;
+            border-color: transparent;
+            border-radius: 3px;
+            height: 36px;
+            margin: 0px;
+            padding-left: 12px;
+            padding-right: 12px;
+            outline: 0px;
+            width: 91%;
+            border-width: 0px;
+            box-shadow: rgb(0, 121, 191) 0px 0px 0px 2px inset;
+        }
+        .addListButton {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.32);
+            }
+            .addIcon::before {
+                content: "";
+                background-color: rgb(255, 255, 255);
+                height: 12px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: background 85ms ease-in 0s;
+                width: 2px;
+            }
+            .addIcon::after {
+                content: "";
+                background-color: rgb(255, 255, 255);
+                height: 2px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transition: background 85ms ease-in 0s;
+                width: 12px;
+            }
+        }
+        .addIcon {
+            margin-right: 15px;
+            margin-left: 10px;
+            position: relative;
+            height: 20px;
+            width: 20px;
+        }
+    }
+}

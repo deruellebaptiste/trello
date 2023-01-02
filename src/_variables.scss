@@ -1,0 +1,51 @@
+$greenLight :rgb(97, 189, 79);
+$green: rgb(90, 172, 68);
+$greylight: rgba(9, 30, 66, 0.04);
+$grey: rgba(9, 30, 66, 0.08);
+$grey49: rgb(49, 49, 49);
+$grey145: rgb(145, 145, 145);
+$grey97: rgb(97, 97, 97);
+$black17: rgb(17, 17, 17);
+@mixin modal-cross {
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 0px;
+    right: 0px;
+    height: 32px;
+    margin: 4px;
+    padding: 4px;
+    width: 32px;
+    &:hover {
+        background-color: rgba(9, 30, 66, 0.08);
+    }
+    &::before {
+        content: "";
+        background-color: rgb(145, 145, 145);
+        height: 15px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background 85ms ease-in 0s;
+        width: 2px;
+    }
+    &:hover::before {
+        background-color: rgb(49, 49, 49);
+    }
+    &::after {
+        content: "";
+        background-color: rgb(145, 145, 145);
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background 85ms ease-in 0s;
+        width: 15px;
+    }
+    &:hover::after {
+        background-color: rgb(49, 49, 49);
+    }
+}
