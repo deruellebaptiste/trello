@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TaskContextType, ITask, ITaskLists } from "../@types/task";
+import { TaskContextType, ITaskLists } from "../@types/task";
 
 interface IProps {
   children: React.ReactNode;
@@ -33,15 +33,27 @@ const TaskProvider: React.FC<IProps> = ({ children }: IProps) => {
         },
       ],
     },
-  ]
+  ];
 
-  const [taskLists, setTaskLists] = React.useState<ITaskLists[]>(initialData);
+  const getInitialState = () => {
+    const data = localStorage.getItem("taskLists");
+    return data ? JSON.parse(data) : [];
+  };
+
+  const [taskLists, setTaskLists] = React.useState<ITaskLists[]>(
+    getInitialState()
+  );
+
+  React.useEffect(() => {
+    window.localStorage.setItem("taskLists", JSON.stringify(taskLists));
+  }, [taskLists]);
 
   const addTask = (title: string, idList: number) => {
     if (!title) {
       return;
     }
     const updatedTaskLists = [...taskLists];
+    console.log(updatedTaskLists);
     const index = updatedTaskLists.findIndex((list) => list.id === idList);
     updatedTaskLists[index] = {
       ...updatedTaskLists[index],
@@ -72,7 +84,6 @@ const TaskProvider: React.FC<IProps> = ({ children }: IProps) => {
   };
 
   const followTask = (id: number, idList: number, followed: boolean) => {
-
     const updatedTaskLists = taskLists.map((list) => {
       if (list.id !== idList) return list;
       return {
@@ -81,7 +92,7 @@ const TaskProvider: React.FC<IProps> = ({ children }: IProps) => {
           if (task.id !== id) return task;
           return {
             ...task,
-            followed : !followed,
+            followed: !followed,
           };
         }),
       };
@@ -89,7 +100,11 @@ const TaskProvider: React.FC<IProps> = ({ children }: IProps) => {
     setTaskLists(updatedTaskLists);
   };
 
-  const updateTaskDescription = (id: number, idList: number, description: string) => {
+  const updateTaskDescription = (
+    id: number,
+    idList: number,
+    description: string
+  ) => {
     const updatedTaskLists = taskLists.map((list) => {
       if (list.id !== idList) return list;
       return {
@@ -105,7 +120,6 @@ const TaskProvider: React.FC<IProps> = ({ children }: IProps) => {
     });
     setTaskLists(updatedTaskLists);
   };
-  
 
   const addList = (title: string) => {
     const newList = {
@@ -123,9 +137,8 @@ const TaskProvider: React.FC<IProps> = ({ children }: IProps) => {
   };
 
   const resetToInitialState = () => {
-    setTaskLists(initialData)
-  }
-  
+    setTaskLists(initialData);
+  };
 
   return (
     <TaskContext.Provider
